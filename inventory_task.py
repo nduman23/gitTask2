@@ -1,22 +1,51 @@
 class Shoe:
-    # Initialising the atrributes below(country, code, product, cost, qunatity)
+    """
+    A class representing a shoe with attributes for country, code, product, cost, and quantity.
+    """
     def __init__(self, country, code, product, cost, quantity):
+        """
+        Initialize a new Shoe instance.
+
+        Parameters:
+        country (str): The country where the shoe is produced.
+        code (str): The unique code identifying the shoe.
+        product (str): The name or type of the shoe.
+        cost (int/float): The cost of the shoe.
+        quantity (int): The available quantity of the shoe.
+        """
         self.country = country
         self.code = code
         self.product = product
         self.cost = cost
         self.quantity = quantity
-
-    # Returning the cost of the shoe 
+ 
     def get_cost(self):
+        """
+        Return the cost of the shoe.
+
+        Returns:
+        int/float: The cost of the shoe.
+        """
         return self.cost
     
-    # Returing the quantitiy of the shoe
+    
     def get_quantity(self):
+        """
+        Return the quantity of the shoe.
+
+        Returns:
+        int: The quantity of the shoe.
+        """
         return self.quantity
       
-    # Returning a string representation
+    
     def __str__(self):
+        """
+        Return a string representation of the Shoe instance.
+
+        Returns:
+        str: A formatted string displaying the shoe's details.
+        """
         return f"Country: {self.country}\nCode: {self.code}\nProduct: {self.product}\nCost: {self.cost}\nQuantity: {self.quantity}\n"
     
 
@@ -24,9 +53,14 @@ class Shoe:
 shoes_list = []
 
 
-# Function to read shoes data
-# Opens file inventory.txt and creates a shoes object with the data and appends into the shoes list
+
 def read_shoes_data():
+    """
+    Read shoe data from 'inventory.txt', create Shoe objects, and append them to a list.
+
+    This function opens 'inventory.txt', reads each line (except the first header line), 
+    creates Shoe objects from the data, and appends these objects to a global list.
+    """
     try:
         with open("inventory.txt", "r") as file:
             lines = file.readlines()
