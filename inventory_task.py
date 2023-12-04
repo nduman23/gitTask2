@@ -73,7 +73,9 @@ def read_shoes_data():
                 shoes_list.append(shoe)
         print("Shoes data has been read from the file!")
     except FileNotFoundError:
-        print("File not found")
+        print("Error: The file inventory.txt was not found.")
+    except IOError:
+        print("Error: An I/O error occurred while handling 'inventory.txt'.")
     except Exception as e:
         print(f"An error occured while reading file: {e}")
         
