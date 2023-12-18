@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 class Shoe:
     """
     A class representing a shoe with attributes for country, code, product, cost, and quantity.
@@ -7,11 +9,11 @@ class Shoe:
         Initialize a new Shoe instance.
 
         Parameters:
-        country (str): The country where the shoe is produced.
-        code (str): The unique code identifying the shoe.
-        product (str): The name or type of the shoe.
-        cost (int/float): The cost of the shoe.
-        quantity (int): The available quantity of the shoe.
+        country (str): The country where the shoe is produced!
+        code (str): The unique code identifying the shoe!
+        product (str): The name or type of the shoe!
+        cost (int/float): The cost of the shoe!
+        quantity (int): The available quantity of the shoe!
         """
         self.country = country
         self.code = code
@@ -21,17 +23,17 @@ class Shoe:
  
     def get_cost(self):
         """
-        Return the cost of the shoe.
+        Return the cost of the shoe/s.
 
         Returns:
-        int/float: The cost of the shoe.
+        int/float: The cost of the shoe/s.
         """
         return self.cost
     
     
     def get_quantity(self):
         """
-        Return the quantity of the shoe.
+        Return the quantity of the shoe/s
 
         Returns:
         int: The quantity of the shoe.
@@ -56,10 +58,10 @@ shoes_list = []
 
 def read_shoes_data():
     """
-    Read shoe data from 'inventory.txt', create Shoe objects, and append them to a list.
+    Read shoe data from 'inventory.txt', creates Shoe objects, and append them to a list.
 
     This function opens 'inventory.txt', reads each line (except the first header line), 
-    creates Shoe objects from the data, and appends these objects to a global list.
+    creates Shoe objects from the data, and appends these objects to a global list1
     """
     try:
         with open("inventory.txt", "r") as file:
@@ -71,6 +73,7 @@ def read_shoes_data():
                 quantity = int(quantity)
                 shoe = Shoe(country, code, product, cost, quantity)
                 shoes_list.append(shoe)
+                pass
         print("Shoes data has been read from the file!")
     except FileNotFoundError:
         print("Error: The file inventory.txt was not found.")
