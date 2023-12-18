@@ -89,7 +89,7 @@ def capture_integer_value(prompt):
             value = int(input(prompt))
             return value
         except ValueError:
-            print("Invalid Input. Please enter a valid number.")
+            print("Invalid Input. Please enter a number that is valid.")
 
 # Function to allow user to capture shoe data and append to the shoes list   
 def capture_shoes():
